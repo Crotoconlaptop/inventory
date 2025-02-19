@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.4",
     "@mui/material": "^6.4.4",
+    "bootstrap": "^5.3.3",
     "file-saver": "^2.0.5",
     "pdfjs-dist": "^4.10.38",
     "react": "^19.0.0",
@@ -34,7 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
     "postcss": "^8.5.2",
-    "tailwindcss": "^4.0.6",
+    "tailwindcss": "^4.0.7",
     "vite": "^6.1.0"
   }
 }

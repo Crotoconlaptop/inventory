@@ -1,39 +1,116 @@
 /* Dark Mode Theme */
 :root {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --primary-color: #ff4081;
-    --secondary-color: #00e5ff;
-    --highlight-color: #32cd32;
+  --bg-color: #1A1A1A;  /* Deep dark */
+  --text-color: #FFFFFF;
+  --primary-color: #FFD700;  /* Gold */
+  --secondary-color: #39FF14; /* Neon Green */
+  --highlight-color: #00FFFF; /* Cyan */
+  --border-color: rgba(255, 215, 0, 0.5); /* Gold with transparency */
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* General Button Styles */
+.btn-custom {
+  background: var(--primary-color);
+  color: var(--bg-color);
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+
+.btn-custom:hover {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--bg-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.navbar-brand {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color) !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--highlight-color) !important;
+}
+
+/* Inventory Page */
+.inventory-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.inventory-page h2 {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+/* Inventory Table */
+.table-custom {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.table-custom thead {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.table-custom tbody tr:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+}
+
+/* Input & Form Styling */
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.form-control:focus {
+  border-color: var(--highlight-color);
+  box-shadow: 0 0 5px var(--highlight-color);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+  .inventory-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
-  
-  /* Global Styles */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
-  
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  button {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  
-  button:hover {
-    background: var(--highlight-color);
-  }
-  
+}
